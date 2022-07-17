@@ -23,9 +23,13 @@ jobs:
 
       - name: Verify Node dependencies
         run: npm install
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build project
         run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build Docker image
         run: docker build .
