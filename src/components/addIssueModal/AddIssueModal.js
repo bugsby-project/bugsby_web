@@ -24,20 +24,16 @@ const getSuggestedSeverityMessage = (suggestedSeverity) => {
 };
 
 const getSuggestedTypeMessage = (suggestedType) => {
-    return (
-        <span/>
-    );
-    // TODO uncomment as a result of Task/#133
-  // return (
-  //   <span style={{display: "flex", marginBottom: "1vh", alignItems: "center"}}>
-  //       We think that this issue is a&nbsp;
-  //       <span className={"container-icon-text"}>
-  //           {getIssueIcon({"type": suggestedType})}
-  //           &nbsp;
-  //           {suggestedType}.
-  //       </span>
-  //   </span>
-  // );
+  return (
+    <span style={{display: "flex", marginBottom: "1vh", alignItems: "center"}}>
+        We think that this issue is a&nbsp;
+        <span className={"container-icon-text"}>
+            {getIssueIcon({"type": suggestedType})}
+            &nbsp;
+            {suggestedType}.
+        </span>
+    </span>
+  );
 };
 
 const redirectToViewDuplicates = (issue, history) => {
