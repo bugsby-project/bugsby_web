@@ -1,7 +1,6 @@
-FROM node:17-alpine3.14 as build
+FROM node:16-alpine3.15 as build
 
 WORKDIR /app
-ENV NODE_OPTIONS=--openssl-legacy-provider
 COPY . .
 RUN npm install
 RUN npm run build
