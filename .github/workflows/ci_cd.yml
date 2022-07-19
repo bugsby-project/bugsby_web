@@ -19,17 +19,13 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 17
+          node-version: 16
 
       - name: Verify Node dependencies
         run: npm install
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build project
         run: npm run build
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Build Docker image
         run: docker build .
